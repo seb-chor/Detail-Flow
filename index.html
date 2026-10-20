@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Flow — Detailing Business OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════ AUTH GATE (demo) ══════════ -->
+  <div id="auth-gate" class="auth">
+    <div class="auth-card">
+      <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="brand-link auth-brand">
+        <div class="brand-block">
+          <div class="brand-mark" aria-label="Detail Flow logo">DF</div>
+          <div class="brand-wordmark">Detail <span>Flow</span></div>
+        </div>
+      </a>
+      <div class="brand-pill">Premium detailing operations</div>
+      <p class="auth-sub">The operating system for detailing businesses.</p>
+
+      <div class="promo-panel">
+        <div class="promo-copy">
+          <span class="eyebrow">Book premium service</span>
+          <h2>Luxury care for every vehicle.</h2>
+        </div>
+        <button type="button" class="btn primary small">Get a quote</button>
+      </div>
+
+      <div class="mini-stats" aria-label="Business highlights">
+        <div class="mini-stat">
+          <strong>1.2k+</strong>
+          <span>Vehicles</span>
+        </div>
+        <div class="mini-stat">
+          <strong>4.9/5</strong>
+          <span>Rating</span>
+        </div>
+        <div class="mini-stat">
+          <strong>Same day</strong>
+          <span>Service</span>
+        </div>
+      </div>
+
+      <form id="login-form">
+        <label>Email<input type="email" required placeholder="you@yourshop.com" /></label>
+        <label>Password<input type="password" required placeholder="••••••••" /></label>
+        <button class="btn primary full" type="submit">Enter dashboard</button>
+      </form>
+      <p class="auth-note">Demo mode — any credentials work.</p>
+    </div>
+  </div>
+
+  <!-- ══════════ APP SHELL ══════════ -->
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="brand-link sidebar-brand">
+        <div class="brand-block">
+          <div class="brand-mark brand-mark-small" aria-label="Detail Flow logo">DF</div>
+          <div class="brand-wordmark">Detail <span>Flow</span></div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a class="nav-link" data-nav="dashboard">▤ Dashboard</a>
+        <a class="nav-link" data-nav="bookings">◷ Bookings</a>
+        <a class="nav-link" data-nav="customers">◉ Customers</a>
+        <a class="nav-link" data-nav="invoices">▣ Invoices</a>
+        <a class="nav-link" data-nav="settings">⚙ Settings</a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="user-chip" id="biz-chip">My Shop</div>
+        <button class="btn ghost small" data-action="logout">Log out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h1 id="page-title">Dashboard</h1>
+        <button class="btn primary" data-action="new-booking">+ New Booking</button>
+      </header>
+      <section id="view-root" class="view"></section>
+    </main>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+  <script src="script.js"></script>
+</body>
+</html>
